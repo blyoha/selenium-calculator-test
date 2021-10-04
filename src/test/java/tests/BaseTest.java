@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,10 +11,10 @@ public class BaseTest {
 
     @BeforeTest
     public void initialize() {
-        String os = System.getProperty("os.name").toLowerCase();
+        String os = System.getProperty("os.name");
         String userHomeDir = System.getProperty("user.home");
 
-        if (os.equals("windows 10")) {
+        if (os.equals("Windows 10")) {
             // Chromedriver for Windows 10
             System.setProperty("webdriver.chrome.driver", userHomeDir + "\\chromedriver\\chromedriver.exe");
         }
