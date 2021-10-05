@@ -13,7 +13,7 @@ public class SecondTest extends BaseTest {
     SearchPage search;
     String problem;
 
-    @Test(priority = 0)
+    @Test(priority = 1)
     public void testCase() throws UnsupportedEncodingException {
         problem = "6/0=";
         search = new SearchPage(driver);
@@ -21,13 +21,13 @@ public class SecondTest extends BaseTest {
         calculator.inputProblem(problem);
     }
 
-    @Test(priority = 1)
+    @Test(priority = 2)
     public void verifyProblemResult() {
         String answerField = calculator.getAnswerField();
         Assert.assertEquals(answerField, "Infinity", "Unexpected result");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void verifyHistory() {
         String historyField = calculator.getHistoryField();
         Assert.assertEquals(historyField, problem, "Unexpected history");
