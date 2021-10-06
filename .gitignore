@@ -1,0 +1,37 @@
+### IntelliJ ###
+# Generated files
+bin/**
+gen/**
+
+# Project based files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OSX files
+.DS_Store
+
+### Java ###
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# VM crach logs
+hs_err_pid*
+
+### Gradle ###
+.gradle
+/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
