@@ -13,6 +13,7 @@ dependencies {
     testImplementation 'org.testng:testng:7.4.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     implementation 'org.seleniumhq.selenium:selenium-java:4.0.0-rc-1'
+    implementation 'io.qameta.allure:allure-testng:2.15.0'
 }
 
 test {

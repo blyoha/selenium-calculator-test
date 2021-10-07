@@ -27,6 +27,10 @@ hs_err_pid*
 .gradle
 /build/
 
+### Allure ###
+.allure
+/allure-results/
+
 # Ignore Gradle GUI config
 gradle-app.setting
 

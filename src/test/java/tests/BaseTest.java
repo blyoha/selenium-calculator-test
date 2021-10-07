@@ -1,15 +1,19 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
 
 public class BaseTest {
-
     public static WebDriver driver;
 
-    @BeforeTest
+    @Step("Initializing...")
+    @Description("Setting up Webdriver")
+    @BeforeClass
     public void initialize() {
         String os = System.getProperty("os.name");
         String userHomeDir = System.getProperty("user.home");
@@ -24,9 +28,12 @@ public class BaseTest {
         }
 
         driver = new ChromeDriver();
+        driver.manage().deleteAllCookies();
     }
 
-    @AfterTest
+    @Step("Quitting browser...")
+    @Description("Quitting web browser")
+    @AfterClass
     public void finish() {
         driver.quit();
     }
