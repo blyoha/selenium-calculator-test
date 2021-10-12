@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'org.test'
+group 'io.github.blyoha'
 version '1.0-SNAPSHOT'
 
 repositories {
