@@ -1,1 +1,1 @@
-# SDET-Test
+# selenium-calculator-test
