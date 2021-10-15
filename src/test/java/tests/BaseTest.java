@@ -16,15 +16,14 @@ public class BaseTest {
     @BeforeClass
     public void initialize() {
         String os = System.getProperty("os.name");
-        String userHomeDir = System.getProperty("user.home");
 
         if (os.equals("Windows 10")) {
             // Chromedriver for Windows 10
-            System.setProperty("webdriver.chrome.driver", userHomeDir + "\\chromedriver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "D:\\work\\GitHub\\SDET Test\\chromedriver\\chromedriver.exe");
         }
         else {
             // Chromedriver for Linux
-            System.setProperty("webdriver.chrome.driver", userHomeDir + "\\chromedriver\\chromedriver");
+            System.setProperty("webdriver.chrome.driver", "D:\\work\\GitHub\\SDET Test\\chromedriver\\chromedriver");
         }
 
         driver = new ChromeDriver();

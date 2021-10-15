@@ -20,7 +20,7 @@ public class FirstTest extends BaseTest {
     @Test(description = "Testing calculator")
     @Description("Opening Google Search, redirecting to calculator page and passing the math problem")
     public void testCase() throws UnsupportedEncodingException {
-        problem = "(1+2)*3-40/5=";
+        problem = "(1+2)*3-40/5";
         search = new SearchPage(driver);
         calculator = search.goToCalc();
         calculator.inputProblem(problem);
@@ -37,6 +37,7 @@ public class FirstTest extends BaseTest {
     @Description("Comparing the expected calculator history with the actual")
     public void verifyHistory() {
         String historyField = calculator.getHistoryField();
-        Assert.assertEquals(historyField, problem, "Unexpected history");
+        String problemField = calculator.getProblemField();
+        Assert.assertEquals(historyField, problemField, "Unexpected history");
     }
 }
